@@ -15,9 +15,10 @@ let package = Package(
     ],
     dependencies: [
         // A fast, efficient, text view for code.
+        // FES fork with extensible menu items provider
         .package(
-            url: "https://github.com/CodeEditApp/CodeEditTextView.git",
-            from: "0.12.1"
+            url: "https://github.com/Fulton-Engineering-Services/CodeEditTextView.git",
+            exact: "0.12.1"
         ),
         // tree-sitter languages
         .package(
