@@ -21,14 +21,23 @@ let package = Package(
             exact: "0.12.1"
         ),
         // tree-sitter languages
+        // FES fork: upstream 0.1.20 plus the CodeLanguage.queryURL fix (dropped the
+        // redundant "Resources/" path component that broke every highlight/fold/indent
+        // query load). Pointing at the fork here keeps a single package identity for
+        // "codeeditlanguages" across the whole graph, so consumers no longer hit the
+        // SwiftPM "Conflicting identity" warning from mixing this URL with the fork.
         .package(
-            url: "https://github.com/CodeEditApp/CodeEditLanguages.git",
+            url: "https://github.com/Fulton-Engineering-Services/CodeEditLanguages.git",
             exact: "0.1.20"
         ),
         // CodeEditSymbols
+        // FES fork: upstream 0.2.3 base plus PR #21 (Process symbol asset catalog) so
+        // Symbols.xcassets is declared as a target resource and Bundle.module is
+        // synthesized under plain swift build. Same identity as upstream to avoid a
+        // conflicting-identity warning in consumers.
         .package(
-            url: "https://github.com/CodeEditApp/CodeEditSymbols.git",
-            exact: "0.2.3"
+            url: "https://github.com/Fulton-Engineering-Services/CodeEditSymbols.git",
+            exact: "0.2.3-fes.1"
         ),
         // SwiftLint
         .package(
