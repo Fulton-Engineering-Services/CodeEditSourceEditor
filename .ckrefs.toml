@@ -1,0 +1,23 @@
+[[refs]]
+type = "self"
+repo = "CodeEditSourceEditor"
+ref = "release/0.15.3"
+description = "This fork's own codekeeper index (FES fork of ChimeHQ/CodeEditSourceEditor)."
+
+[[refs]]
+type = "dependency"
+repo = "CodeEditTextView"
+ref = "HEAD"
+description = "Source editor's text view layer; Package.swift pins ChimeHQ/CodeEditTextView, indexed here as the FES fork."
+
+[[refs]]
+type = "dependency"
+repo = "CodeEditLanguages"
+ref = "fix/0.1.20-query-url"
+description = "Tree-sitter language packs; Package.swift pins ChimeHQ/CodeEditLanguages, indexed here as the FES fork."
+
+[[refs]]
+type = "dependency"
+repo = "CodeEditSymbols"
+ref = "fes-release"
+description = "Symbol model types; Package.swift pins ChimeHQ/CodeEditSymbols, indexed here as the FES fork."
